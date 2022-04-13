@@ -1,0 +1,31 @@
+@model ModelUser;
+<div class="row">
+    <div class="col-md-6 mx-auto p-0">
+        <div class="card">
+            <div class="login-box">
+                <div class="login-snip"> <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label> <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+                    <div class="login-space">
+                        <div>
+                            <partial name="_LoginM" />
+                        </div>
+                        <div class="sign-up-form">
+                        <form asp-action="ProcessRegister" asp-controller="ModelUser" method="post">
+                            <div class="group"> <label asp-for="FirstName" class="label">FirstName</label> <input asp-for="FirstName" type="text" class="input" placeholder="Create your First Name"> </div>
+                            <div class="group"> <label asp-for="LastName" class="label">LastName</label> <input asp-for="LastName" type="text" class="input" placeholder="Create your Last Name"> </div>
+                            <div class="group"> <label asp-for="DOF" class="label">Date of birth</label> <input asp-for="DOF" type="date" class="input" placeholder="Date of Birth"> </div>
+                            <div class="group"> <label asp-for="City" class="label">City</label> <input asp-for="City" type="text" class="input" placeholder="Create your City"> </div>
+                            <div class="group"> <label asp-for="MobilePhone" class="label">Mobile Phone</label> <input asp-for="MobilePhone" type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{4}" class="input" placeholder="966-55-xxx-xxxx"> </div>
+                            <div class="group"> <label asp-for="Email" class="label">Email Address</label> <input asp-for="Email" type="text" class="input" placeholder="Enter your email address"> </div>
+                            <div class="group"> <label asp-for="Password" class="label">Password</label> <input asp-for="Password" type="password" class="input" data-type="password" placeholder="Create your password"> </div>
+                            <div class="group"> <label asp-for="Confirm" class="label">Repeat Password</label> <input asp-for="Confirm" type="password" class="input" data-type="password" placeholder="Repeat your password"> </div>
+                            <div class="group"> <input type="submit" class="button" value="Sign Up"> </div>
+                            </form>
+                            <div class="hr"></div>
+                            <div class="foot"> <label for="tab-1">Already Member?</label> </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

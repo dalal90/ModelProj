@@ -1,0 +1,44 @@
+@model App;
+<div class="text-center">
+<h1 class="display-4">Welcome   </h1>
+<p>Apply to become a model today with no obligation!</p>
+<h5 class="display-4">Change your life and discover a modern way to make money as a model.</h5>
+<p>You are your own manager.</p>
+<p>We are looking for and place models between 0-99 years.</p>
+<p>No matter where you live - we are online and work worldwide.</p>
+</div>
+
+<form asp-action="CreatApp" asp-controller="ModelUser" method="post">
+    <div class="group"> 
+        <label asp-for="AgeCat" class="label">AgeCat</label>
+        <Select asp-for="AgeCat">
+            <option id="babies">0 - 3</option>
+            <option id="kids">4 - 12</option>
+            <option id="teen">13 - 20 </option>
+            <option id="adult">21 +</option>
+        </Select> 
+    </div>
+
+    <div class="group">
+        <label asp-for="Age" class="label">Age</label> 
+        <input asp-for="Age" type="number" class="input"> 
+    </div>
+        <div class="group">
+        <label asp-for="Height" class="label">Height</label> 
+        <input asp-for="Height" type="number" class="input"> 
+    </div>
+
+    <div class="group">
+        <label asp-for="Weight" class="label">Weight</label> 
+        <input asp-for="Weight" type="number" class="input"> 
+    </div>
+    <div class="group">
+        <label asp-for="Instagram" class="label">Instagram Account</label> 
+        <input asp-for="Instagram" type="text" class="input"> 
+    </div>
+    <div class="group">
+        <label asp-for="LinkedIn" class="label">LinkedIn Account</label> 
+        <input asp-for="LinkedIn" type="text" class="input"> 
+    </div>
+    <div class="group"> <input type="submit" class="button" value="Submit"> </div>
+</form>

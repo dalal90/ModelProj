@@ -1,0 +1,28 @@
+@model App;
+
+<div class="row">
+    <div class="col-md-6 mx-auto p-0">
+        <div class="card">
+            <div class="cardbg">
+            <div class="text-center">
+                <h1>Model Informations:</h1>
+                <h5 >Name:</h5>
+                <p>@Model.Creator.FirstName @Model.Creator.LastName</p>
+                <h5 >Age:</h5>
+                <p>@Model.Age</p>
+                <h5 >Height:</h5>
+                <p>@Model.Height</p>
+                <h5 >Weight</h5>
+                <p>@Model.Weight</p>
+                <h5 >Phone No.:</h5>
+                <p>@Model.Creator.MobilePhone</p>
+                <h5>Email:</h5>
+                <p>@Model.Creator.Email</p>
+                <h5>Social Media:</h5>
+                <a href="https://www.instagram.com/@Model.Instagram"><img class="insta" src="/images/insta.jpg"></a>
+                @* <a href="https://https://www.linkedin.com/@Model.LinkedIn"><img src="/images/linkedin.png"></a> *@
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
